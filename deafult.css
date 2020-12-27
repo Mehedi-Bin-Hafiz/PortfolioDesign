@@ -237,6 +237,7 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-top: 50px;
     padding-bottom: 50px;
+    gap:100px;
 }
 
 #skills{
@@ -245,7 +246,15 @@ a{
     background-color: var(--previewShadow);
 }
 
-
+#social_img{
+    padding-top: 10px;
+    width: 100%;
+}
+.social_link{
+     display: grid;
+     align-content: center;
+     text-align: center;
+}
 #expeId{
     font-family: 'Oleo Script', cursive;
 }
