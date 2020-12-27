@@ -1,11 +1,11 @@
 :root{
-    --mainColor: #fffadf;
+    --mainColor: #fffbe4;
     --borderColor: #c1c1c1;
     --secondaryColor: #ffffff;
     --mainText:black;
     --secondaryText:#4b5156;
     --previewBg:rgba(255, 250, 234, 0.7);
-    --previewShadow: #fff4d0;
+    --previewShadow: #fff7dc;
 }
 html, body{
     padding: 0;
@@ -264,60 +264,69 @@ a{
 
 /*contact*/
 #contact{
-    margin-top: 5.5rem;
+    
+    background-color: var(--previewShadow);
+    
 }
 
 
-#contact div.contactclass{
-    margin-top: 100px;
+.contactclass{
+    margin-top: 80px;
     width: 100%;
     height: 500px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: space-evenly;
 
 }
 
-#contact h1{
+
+.main-container h1{
     text-align: center;
     margin-bottom: -60px;
+    
+}
+.sContact{
+    background-color: var(--previewShadow);
+    border-bottom:  1 px solid var(--borderColor);
+    overflow: auto;
 }
 
-#contact div.contactclass div.mapinfo iframe{
-    margin-left:30px;
+
+.mapinfo iframe{
+    margin-top: 45px;
     box-sizing: border-box;
-    width: 40%;
-    height: 300px;
-    display: inline-block;
-    float:left;
+    width: 90%;
+    height: 70%;
 
 }
 
-#contact div.contactclass div.messageinfo{
-    clear: both;
-    box-sizing: border-box;
-    width: 49%;
-    height: auto;
-    display: inline-block;
-    margin-top: 10px;
+.messageinfo{
     margin-left: 50px;
-    float: right;
-    position: absolute;
+    
 }
-#contact div.contactclass div.messageinfo table tr td p{
+
+.messageinfo table tr td{
     font-weight: bold;
 }
 
-#contact div.contactclass div.messageinfo table tr td input[type=text],[type=email]{
+.messageinfo table tr td input[type=text],[type=email]{
     width: 100%;
-    padding: 5px 20px;
+    padding: 3px 20px;
     margin: 8px 0;
     box-sizing: border-box;
 }
-#contact div.contactclass div.messageinfo table tr td input[type=textarea]{
+.messageinfo table tr td input[type=textarea]{
     width: 100%;
     height: 100%;
-    padding: 5px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
     border-radius: 0px;
+}
+@media screen and (max-width:800px){  
+    .messageinfo{
+        margin-left: 0px;
+        
+    }
 }
 
 .submitbutton{
@@ -338,6 +347,12 @@ a{
 
 
 /*footer part*/
+
+.card-title{
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 20px;
+}
 
 footer div{
     width: 100%;
@@ -366,26 +381,43 @@ footer div div#copyrightinfo{
 
 /*try to check comment*/
 
-footer div div#footersearch{
+.footerMain-container{
+    width :100%;
+    /*margin: 0 auto is shorthand for setting the top and bottom margins to zero, and the left and right margins to auto*/
+}
+
+.footerclass{
+    padding-top: 30px;
+    width: 100%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: space-evenly;
+
+
+}
+
+
+#footersearch{
     
     box-sizing: border-box;
-    width: 49%;
+    width: 45%;
     height: 150px;
     margin: 0 auto;
     display: inline-block;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 70px;
 
 }
 
 #footersearch form input[type=search] {
-    width: 70%;
+    width: 100%;
     padding: 5px 20px;
     margin: 8px 0;
     box-sizing: border-box;
   }
 
-div#footersearch form input[type=search]{
+#footersearch form input[type=search]{
 
       height: 40px;
       margin: 0 auto;
@@ -393,13 +425,12 @@ div#footersearch form input[type=search]{
       border:solid 1px #ccc;
   }
 
-p#declare{
+.fdeclare p{
       color: gray;
       text-align: center;
-      font-size: 21px;
+      font-size: 20px;
+
   }
-
-
 
 @media screen and (max-width:1200px){
     .main-container{
@@ -419,7 +450,6 @@ p#declare{
     }
     .right-column{
         justify-content: center;
-  
     }
 
 }
