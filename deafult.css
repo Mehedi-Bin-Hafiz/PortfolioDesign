@@ -270,7 +270,7 @@ a{
 
 #contact div.contactclass{
     margin-top: 100px;
-    background: #EDEDB4;
+    background: var(--previewShadow);
     width: 100%;
     height: 500px;
 
@@ -394,7 +394,7 @@ div#footersearch form input[type=search]{
       border:solid 1px #ccc;
   }
 
-  p#declare{
+p#declare{
       color: gray;
       text-align: center;
       font-size: 21px;
